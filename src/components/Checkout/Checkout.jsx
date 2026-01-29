@@ -8,7 +8,7 @@ const Checkout = () => {
   const navigate = useNavigate()
   const { cartItems, total, clearCart } = useCart()
   
-  // Calculate totals
+  // Calculate totalsrm -rf node_modules
   const subtotal = total
   const shippingCost = subtotal > 50 ? 0 : 5.99 // Free shipping over $50
   const taxRate = 0.08 // 8% tax
