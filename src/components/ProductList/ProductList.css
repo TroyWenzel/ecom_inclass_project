@@ -1,0 +1,43 @@
+.card-list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Changed from 1fr 1fr 1fr to repeat(4, 1fr) */
+  width: 90vw; /* Increased from 80vw to give more space for 4 columns */
+  margin: 0 auto;
+  justify-items: center;
+  align-items: start; /* Changed from center to start for better alignment */
+  row-gap: 30px; /* Reduced from 50px */
+  column-gap: 20px; /* Added column gap */
+  padding: 30px; /* Reduced from 50px */
+}
+
+/* Optional: Add responsive design for smaller screens */
+@media (max-width: 1200px) {
+  .card-list {
+    grid-template-columns: repeat(3, 1fr);
+    width: 95vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.no-products-message {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 1.2rem;
+  grid-column: 1 / -1; /* Makes it span all columns */
+}
+
+.no-products-message p {
+  margin: 10px 0;
+}
